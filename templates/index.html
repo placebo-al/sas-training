@@ -1,0 +1,43 @@
+
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Beginners Workout</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th></th>
+            {% for day in range(1,8) %}
+            <th>Day {{ loop.index }}</th>
+            {% endfor %}
+        </tr>
+    </thead>
+    {% for line in week %}
+    <tr>
+        <th>Week {{ loop.index }}</th>
+        {% for day in week[loop.index0] %}
+        <td>{{ day }}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+
+{% for workout in [novice_weights,abdominals,programme1] %}
+<table>
+    <thead>
+        <tr>
+            <th>{{ workout['name'] }}</th>
+            <th >{{ workout['sets'] }}</th>
+        </tr>
+    </thead>
+    {% for line in workout['exes'] %}
+    <tr>
+        <td>{{ workout['exes'][loop.index0] }}</td>
+        <td>{{ workout['reps'] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endfor %}
+
+{% endblock content %}

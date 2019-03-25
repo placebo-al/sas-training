@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+
+    <head>
+        <meta http-equiv=Content-Type content="text/html; charset=utf-8">
+        <link href={{ url_for('static', filename="style.css") }} rel="stylesheet" type="text/css">
+
+        <title>
+        Sas Personal Trainer Workout
+        {% block title %}   
+        {% endblock title %}
+        </title> 
+    
+    </head>
+
+    <body>
+    {% block content %} {% endblock content %}
+
+
+    <h3>Here is a link to the Beginners program</h3>
+    <a href={{ url_for('index') }}>Beginners Program</a>    
+    <h3>Here is a link to the Intermediate program</h3>
+    <a href={{ url_for('intermediate') }}>Intermediate Program</a>
+    <h3>Here is a link to the Advanced program</h3>
+    <a href={{ url_for('advanced') }}>Advanced Program</a>
+
+
+    </body>
+
+</html>
+
