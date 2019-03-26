@@ -1,6 +1,47 @@
 class Exercise(object):
+
     def __init__(self):
         pass
+
+    def name(self):
+        pass
+
+    def sets(self):
+        pass
+
+    def reps(self):
+        pass
+
+
+class Workout(Exercise):
+
+    def __init__(self):
+        pass
+
+    def name(self):
+        pass
+
+    def html_tag(self):
+        pass
+
+
+class Day(Workout):
+
+    def __init__(self):
+        pass
+
+
+class Week(Day):
+
+    def __init__(self):
+        pass
+
+
+class Cycle(Week):
+
+    def __init__(self):
+        pass
+
 
     programme1 = { 
             'name': 'Programme 1',
@@ -243,7 +284,11 @@ class Exercise(object):
             }
             
 class Weeks(object):
+    
     def __init__(self):
+        pass
+
+    def day(self):
         pass
 
     beginner_weeks = [
