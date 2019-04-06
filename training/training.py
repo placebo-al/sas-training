@@ -1,292 +1,302 @@
-# class Exercise(object):
-# 
-#     def __init__(self):
-#         pass
-# 
-#     def name(self):
-#         pass
-# 
-#     def sets(self):
-#         pass
-# 
-#     def reps(self):
-#         pass
-# 
-# 
-# class Workout(Exercise):
-# 
-#     def __init__(self):
-#         pass
-# 
-#     def name(self):
-#         pass
-# 
-#     def html_tag(self):
-#         pass
-# 
-# 
-# class Day(Workout):
-# 
-#     def __init__(self):
-#         pass
-# 
-# 
-# class Week(Day):
-# 
-#     def __init__(self):
-#         pass
-# 
-# 
-# class Cycle(Week):
-# 
-#     def __init__(self):
-#         pass
-# 
 class Exercise(object):
 
     def __init__(self):
         pass
 
-    programme1 = { 
-            'name': 'Programme 1',
-            'tag': 'programme1',
-            'sets': '3 sets',
-            'reps': 5,
-            'exes': [
-                    'Push Ups',
-                    'Crunches',
-                    'Lunges',
-                    'Leg Raises',
-                    'Dips',
-                    'Bent Knee Sit-ups',
-                    'Calf Raises',
-                    'Thigh hand slides',
-                    'Chins',
-                    'Leg Raises',
-                    'Rear Scissors',
-                    'Bent Knee Sit-ups',
-                    ],
-            }
-    novice_weights = {
-            'name': 'Novice Weights',
-            'tag': 'nov_weights',
-            'sets': '3 sets',
-            'reps': 10,
-            'exes': [ 
-                    'DB Laterals',
-                    'Flyes',
-                    'Bent Over Rows',
-                    'Standing Calf Raises',
-                    'BB Bicep Curls',
-                    'Squats',
-                    ]
-            }
-    abdominals = {
-            'name': 'Abdominals',
-            'tag': 'abs',
-            'sets': '2 sets',
-            'reps': 10,
-            'exes': [
-                    'V Crunches',
-                    'Twisting Crunches',
-                    'Bent Knee Sit Ups',
-                    'Wide Arm Press Ups',
-                    'Leg Raises',
-                    ]
-            }
-    everyday = {
-            'name': 'Everyday Exercises',
-            'tag': 'everyday',
-            'sets': '3 sets',
-            'reps': 5,
-            'exes': [
-                    'Breathing Exercises',
-                    'Press ups',
-                    'Crunches',
-                    'Finger-tip Press ups',
-                    'Bent Knee Sit-ups',
-                    'Wide Arm Press ups',
-                    'Hand Slides',
-                    'Push ups',
-                    'Leg Raises',
-                    'Finger-tip Press ups',
-                    'Bent Knee Sit-ups',
-                    'Wide Arm Press ups',
-                    ],
-            }
-    programme2 = {
-            'name': 'Programme 2',
-            'tag': 'programme2',
-            'sets': '3 sets',
-            'reps': 5,
-            'exes': [
-                    'Squat Thrusts',
-                    'Crunches',
-                    'Burpees',
-                    'Stride Jumps',
-                    'Bent Knee Sit Ups',
-                    'Alternate Strides',
-                    'Thigh Hand Slides',
-                    'Step Ups',
-                    'Leg Raises',
-                    'Jump Ups',
-                    'Sit Ups',
-                    ],
-            }
-    int_strength = {
-            'name': 'Intermediate Strength',
-            'tag': 'int_strength',
-            'sets': '3 sets',
-            'reps': [10, 10, 10, 10, 10, 5, 5, 5, 5, 5, 5],
-            'exes': [
-                    'Flyes',
-                    'Bent Over Rows',
-                    'Standing Calf Raises',
-                    'BB Bicep Curls',
-                    'Squats',
-                    'Upright Rows',
-                    'Bench Presses',
-                    'One Arm Rows',
-                    'Standing Calf Raises',
-                    'Lying Triceps Presses',
-                    'Squats',
-                    ],
-            }
-    cycle = {
-            'name': 'Cycle Workouts',
-            'tag': 'cycle',
-            'sets': '',
-            'exes': [
-                 'Stage 1',
-                 'Stage 2',
-                 'Stage 3',
-                 ],
-            'reps': [
-                '16 km',
-                '32 km',
-                '80 km',
-                ],
-            }
-    run = {
-            'name': 'Run Workouts',
-            'tag': 'run',
-            'sets': '',
-            'exes': [
-                 'Short Run',
-                 'Fun Run',
-                 'Fast Run',
-                 'Long Run',
-                 ],
-            'reps': [
-                '5 km, 30 minutes',
-                '8.5 km',
-                '5 km as fast as possible',
-                '16 km',
-                ],
-            }
-    timed_swim = {
-            'name': 'Swimming Workout',
-            'tag': 'timed_swim',
-            'exes': [
-                    '4 Laps 3mins',
-                    '8 Laps 6mins',
-                    '16 Laps 12 mins',
-                    '8 Laps 6mins',
-                    '4 Laps 3mins',
-                    ],
-            'reps': [
-                'Rest 3 mins',
-                'Rest 6 mins',
-                'Rest 6 mins',
-                'Rest 3 mins',
-                'Finish up',
-                ],
-            }
-    fun_swim = {
-            'name': 'Fun Swim',
-            'tag': 'fun_swim',
-            'reps': '',
-            'sets': '',
-            'exes': ['30 mins vary strokes',]
-            }
+class Programme1(object):
 
-    programme3 = {
-            'name': 'Programme 3',
-            'tag': 'programme3',
-            'sets': '3 sets',
-            'reps': 10,
-            'exes': [
-                    'Press Ups',
-                    'Crunches',
-                    'Squat Thrusts',
-                    'Straight Leg Raises',
-                    'Dips',
-                    'Bent Knee Sit Ups',
-                    'Burpees',
-                    'Thigh Hand Slides',
-                    'Chins',
-                    'Leg Raises',
-                    'Stride Jumps',
-                    'Sit Ups',
-                    'Calf Raises',
-                    'Crunches',
-                    'Step Ups',
-                    'Straight Leg Raises',
-                    'Lunges',
-                    'Bent Knee Sit Ups',
-                    'Jumps Ups',
-                    'Thigh Hand Slides',
-                    'Rear Scissors',
-                    'Leg Raises',
-                    ],
-            }
-    extras = {
-            'name': 'Extra exercises',
-            'tag': 'extras',
-            'sets': '3 sets',
-            'reps': 10,
-            'exes': [
-                    'Head Rolls',
-                    'Twisting Crunches',
-                    'Parallel Dips',
-                    'V Crunches',
-                    'Reverse Neck Rolls',
-                    'Rope Climb',
-                    'Chins Overhand',
-                    'Chins Underhand',
-                    ],
-            }
-    advancedweights = {
-            'name': 'Advanced Weights',
-            'tag': 'adv_weights',
-            'sets': '3 sets',
-            'reps': 10,
-            'exes': [
-                    'DB Laterals',
-                    'Upright Rows',
-                    'Bent Over Laterals',
-                    'DB Presses',
-                    'Bench Presses',
-                    'Flyes',
-                    'Pullovers',
-                    'Squats',
-                    'Standing Calf Raises',
-                    'Leg Extensions',
-                    'Leg Curls',
-                    'BB Curls',
-                    'Lying Triceps Presses',
-                    'Wrist Curls',
-                    'Bent Over Rows',
-                    'One Arm Rows',
-                    'Deadlifts',
-                    'Squats',
-                    'Standing Calf Raises',
-                    'Leg Extensions',
-                    'Leg Curls',
-                    '''End of the week you can halve the weights and do 30then 40 and 50 reps before adding weight and starting again'''
-                    ],
-            }
-            
+    def __init__(self):
+        pass
+
+    name = 'Programme 1'
+    tag = 'programme1'
+    sets = 3
+    reps = 5
+    exes = [
+        'Push Ups',
+        'Crunches',
+        'Lunges',
+        'Leg Raises',
+        'Dips',
+        'Bent Knee Sit-ups',
+        'Calf Raises',
+        'Thigh hand slides',
+        'Chins',
+        'Leg Raises',
+        'Rear Scissors',
+        'Bent Knee Sit-ups',
+        ]
+
+class Novice_weights(object):
+    
+    def __init__(self):
+        pass
+    
+    name = 'Novice Weights'
+    tag = 'nov_weights'
+    sets = 3
+    reps = 10
+    exes = [ 
+            'DB Laterals',
+            'Flyes',
+            'Bent Over Rows',
+            'Standing Calf Raises',
+            'BB Bicep Curls',
+            'Squats',
+            ]
+
+class Abdominals(object):
+    
+    def __init__(self):
+        pass
+    
+    name = 'Abdominals'
+    tag = 'abs'
+    sets = 2
+    reps = 10
+    exes = [
+            'V Crunches',
+            'Twisting Crunches',
+            'Bent Knee Sit Ups',
+            'Wide Arm Press Ups',
+            'Leg Raises',
+            ]
+
+class Everyday(object):
+    
+    def __init__(self):
+        pass
+    
+    name = 'Everyday Exercises'
+    tag = 'everyday'
+    sets = 3
+    reps = 5
+    exes = [
+            'Breathing Exercises',
+            'Press ups',
+            'Crunches',
+            'Finger-tip Press ups',
+            'Bent Knee Sit-ups',
+            'Wide Arm Press ups',
+            'Hand Slides',
+            'Push ups',
+            'Leg Raises',
+            'Finger-tip Press ups',
+            'Bent Knee Sit-ups',
+            'Wide Arm Press ups',
+            ]
+    
+class Programme2(object):
+    
+    def __init__(self):
+         pass
+    
+    name = 'Programme 2'
+    tag = 'programme2'
+    sets = 3
+    reps = 5
+    exes = [
+            'Squat Thrusts',
+            'Crunches',
+            'Burpees',
+            'Stride Jumps',
+            'Bent Knee Sit Ups',
+            'Alternate Strides',
+            'Thigh Hand Slides',
+            'Step Ups',
+            'Leg Raises',
+            'Jump Ups',
+            'Sit Ups',
+            ]
+       
+class Int_strength(object):
+    
+    def __init__(self):
+         pass
+    
+    name = 'Intermediate Strength'
+    tag = 'int_strength'
+    sets = 3
+    reps = [10, 10, 10, 10, 10, 5, 5, 5, 5, 5, 5]
+    exes = [
+            'Flyes',
+            'Bent Over Rows',
+            'Standing Calf Raises',
+            'BB Bicep Curls',
+            'Squats',
+            'Upright Rows',
+            'Bench Presses',
+            'One Arm Rows',
+            'Standing Calf Raises',
+            'Lying Triceps Presses',
+            'Squats',
+            ]
+
+class Cycle(object):
+    
+    def __init__(self):
+         pass
+    
+    name = 'Cycle Workouts'
+    tag = 'cycle'
+    sets = 1
+    exes = [
+         'Stage 1',
+         'Stage 2',
+         'Stage 3',
+         ]
+    reps = [
+        '16 km',
+        '32 km',
+        '80 km',
+        ]
+
+
+class run(object):
+    
+    def __init__(self):
+        pass
+    
+    name = 'Run Workouts'
+    tag = 'run'
+    sets = 1
+    exes = [
+        'Short Run',
+        'Fun Run',
+        'Fast Run',
+        'Long Run',
+        ]
+    reps = [
+       '5 km, 30 minutes',
+       '8.5 km',
+       '5 km as fast as possible',
+       '16 km',
+       ]
+
+class Timed_swim(object):
+    
+    def __init__(self):
+        pass
+    
+    name = 'Swimming Workout'
+    tag = 'timed_swim'
+    sets = 1
+    exes = [
+            '4 Laps 3mins',
+            '8 Laps 6mins',
+            '16 Laps 12 mins',
+            '8 Laps 6mins',
+            '4 Laps 3mins',
+            ]
+    reps =  [
+        'Rest 3 mins',
+        'Rest 6 mins',
+        'Rest 6 mins',
+        'Rest 3 mins',
+        'Finish up',
+        ]
+
+
+class Fun_swim(object):
+    
+    def __init__(self):
+        pass
+    
+    name = 'Fun Swim'
+    tag = 'fun_swim'
+    reps = 1
+    sets = 1
+    exes = ['30 mins vary strokes',]
+    
+class Programme3(object):
+    
+    def __init__(self):
+        pass
+    
+    name = 'Programme 3'
+    tag = 'programme3'
+    sets = 3
+    reps = 10
+    exes = [
+            'Press Ups',
+            'Crunches',
+            'Squat Thrusts',
+            'Straight Leg Raises',
+            'Dips',
+            'Bent Knee Sit Ups',
+            'Burpees',
+            'Thigh Hand Slides',
+            'Chins',
+            'Leg Raises',
+            'Stride Jumps',
+            'Sit Ups',
+            'Calf Raises',
+            'Crunches',
+            'Step Ups',
+            'Straight Leg Raises',
+            'Lunges',
+            'Bent Knee Sit Ups',
+            'Jumps Ups',
+            'Thigh Hand Slides',
+            'Rear Scissors',
+            'Leg Raises',
+            ]
+
+class Extras(object):
+    
+    def __init__(self):
+         pass
+    
+    name = 'Extra exercises'
+    tag = 'extras'
+    sets = 3
+    reps = 10
+    exes = [
+            'Head Rolls',
+            'Twisting Crunches',
+            'Parallel Dips',
+            'V Crunches',
+            'Reverse Neck Rolls',
+            'Rope Climb',
+            'Chins Overhand',
+            'Chins Underhand',
+            ]
+
+class Advancedweights(object):
+    
+    def __init__(self):
+         pass
+    
+    name = 'Advanced Weights'
+    tag = 'adv_weights'
+    sets = 3
+    reps = 10
+    exes = [
+            'DB Laterals',
+            'Upright Rows',
+            'Bent Over Laterals',
+            'DB Presses',
+            'Bench Presses',
+            'Flyes',
+            'Pullovers',
+            'Squats',
+            'Standing Calf Raises',
+            'Leg Extensions',
+            'Leg Curls',
+            'BB Curls',
+            'Lying Triceps Presses',
+            'Wrist Curls',
+            'Bent Over Rows',
+            'One Arm Rows',
+            'Deadlifts',
+            'Squats',
+            'Standing Calf Raises',
+            'Leg Extensions',
+            'Leg Curls',
+            '''End of the week you can halve the weights and do 30then 40 and 50 reps before adding weight and starting again'''
+            ]
+    
+    
 class Weeks(object):
     
     def __init__(self):
