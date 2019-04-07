@@ -1,7 +1,8 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% block content %}
 
 <h1>Intermediate Workout</h1>
+
 <table>
     <thead>
         <tr>
@@ -11,18 +12,17 @@
             {% endfor %}
         </tr>
     </thead>
-
-    {% for line in week %}
+    {% for week in [week1, week2, week3, week4] %}
     <tr>
         <th>Week {{ loop.index }}</th>
-        {% for day in week[loop.index0] %}
-        <td>{{ day }}</td>
+        {% for day in week.week %}
+        <td>{{ week.week[loop.index0] }}</td>
         {% endfor %}
     </tr>
     {% endfor %}
 </table>
 
-{% for workout in [everyday,program1,program2,int_strength,cycle,timed_swim] %}
+{% for workout in [everyday,program1,program2,int_weights,cycle,timed_swim] %}
 <table>
     <thead>
         <tr>

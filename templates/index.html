@@ -13,17 +13,17 @@
             {% endfor %}
         </tr>
     </thead>
-    {% for line in week %}
+    {% for week in [week1, week2, week3, week4] %}
     <tr>
         <th>Week {{ loop.index }}</th>
-        {% for day in week[loop.index0] %}
-        <td>{{ day }}</td>
+        {% for day in week.week %}
+        <td>{{ week.week[loop.index0] }}</td>
         {% endfor %}
     </tr>
     {% endfor %}
 </table>
 
-{% for workout in [nov_wts,abdominals,program1] %}
+{% for workout in [nov_weights,abdominals,program1] %}
 <table>
     <thead>
         <tr>

@@ -1,4 +1,4 @@
-class Exercise(object):
+class Workout(object):
 
     def __init__(self, name, sets, reps, exes):
         self.name = name
@@ -9,7 +9,7 @@ class Exercise(object):
             reps += (len(exes)-1) * reps
 
 
-programme1 = Exercise('Programme 1',3 ,[5] , [
+programme1 = Workout('Programme 1',3 ,[5] , [
         'Push Ups',
         'Crunches',
         'Lunges',
@@ -25,7 +25,7 @@ programme1 = Exercise('Programme 1',3 ,[5] , [
         ])
 
 
-novice_weights = Exercise('Novice Weights', 3, [10], exes = [ 
+nov_weights = Workout('Novice Weights', 3, [10], exes = [ 
             'DB Laterals',
             'Flyes',
             'Bent Over Rows',
@@ -34,7 +34,7 @@ novice_weights = Exercise('Novice Weights', 3, [10], exes = [
             'Squats',
             ])
 
-abdominals = Exercise(
+abdominals = Workout(
     name = 'Abdominals',
     sets = 2,
     reps = [10],
@@ -46,7 +46,7 @@ abdominals = Exercise(
             'Leg Raises',
             ])
 
-everyday = Exercise(
+everyday = Workout(
     name = 'Everyday Exercises',
     sets = 3,
     reps = [5],
@@ -65,7 +65,7 @@ everyday = Exercise(
             'Wide Arm Press ups',
             ])
     
-programme2 = Exercise(
+programme2 = Workout(
     name = 'Programme 2',
     sets = 3,
     reps = [5],
@@ -83,7 +83,7 @@ programme2 = Exercise(
             'Sit Ups',
             ])
        
-int_strength = Exercise(
+int_weights = Workout(
     name = 'Intermediate Strength',
     sets = 3,
     reps = [10, 10, 10, 10, 10, 5, 5, 5, 5, 5, 5],
@@ -101,7 +101,7 @@ int_strength = Exercise(
             'Squats',
             ])
 
-cycle = Exercise(
+cycle = Workout(
     name = 'Cycle Workouts',
     sets = 1,
     exes = [
@@ -116,7 +116,7 @@ cycle = Exercise(
         ])
 
 
-run = Exercise(
+run = Workout(
     name = 'Run Workouts',
     sets = 1,
     exes = [
@@ -132,7 +132,7 @@ run = Exercise(
        '16 km',
        ])
 
-timed_swim = Exercise(
+timed_swim = Workout(
     name = 'Swimming Workout',
     sets = 1,
     reps =  [
@@ -151,13 +151,13 @@ timed_swim = Exercise(
             ])
 
 
-fun_swim = Exercise(
+fun_swim = Workout(
     name = 'Fun Swim',
     sets = 1,
     reps = [1],
     exes = ['30 mins vary strokes',])
     
-programme3 = Exercise(
+programme3 = Workout(
     name = 'Programme 3',
     sets = 3,
     reps = [10],
@@ -186,7 +186,7 @@ programme3 = Exercise(
             'Leg Raises',
             ])
 
-extras = Exercise(
+extras = Workout(
     name = 'Extra exercises',
     sets = 3,
     reps = [10],
@@ -201,7 +201,7 @@ extras = Exercise(
             'Chins Underhand',
             ])
 
-advancedweights = Exercise(
+adv_weights = Workout(
     name = 'Advanced Weights',
     sets = 3,
     reps = [10],
@@ -233,128 +233,133 @@ advancedweights = Exercise(
     
 class Weeks(object):
     
-    def __init__(self):
-        pass
+    def __init__(self, week):
+        self.week = week
 
     def day(self):
         pass
 
-    beginner_weeks = [
-            [
-            '40 mins run walk',
-            'Stretch',
-            'Programme 1 - 5 reps  -  Stretch',
-            '5 x Sit ups, leg raises, Sit Ups, Crunches',
-            'Novice Weights 2 sets  -  Stretch',
-            'Rest',
-            '30 mins Swim',
-            ],
-            [
-            'Abdominals 2 x 5',
-            'Programme 1',
-            'Abdominals 2 x 5',
-            '40 mins run walk',
-            'Abdominals 2 x 10',
-            'Novice Weights',
-            'Abdominals 2 x 10',
-            ],
-            [
-            '40 mins Run',
-            'Abs and Pushups',
-            'Programme 1',
-            'Abs and Pushups',
-            'Novice Weights',
-            'Abs and Pushups',
-            'Swim',
-            ],
-            [
-            'Abs and Pushups  -  40 mins Run',
-            'Novice Weights',
-            'Programme 1  -  40 mins Run',
-            'Rest',
-            'Abs and Pushups',
-            'Novice Weights',
-            'Programme 1',
-            ]
-            ]
+beg_wk_1 = Weeks(
+        [
+        '40 mins run walk',
+        'Stretch',
+        'Programme 1 - 5 reps  -  Stretch',
+        '5 x Sit ups, leg raises, Sit Ups, Crunches',
+        'Novice Weights 2 sets  -  Stretch',
+        'Rest',
+        '30 mins Swim',
+        ])
+beg_wk_2 = Weeks(
+        [
+        'Abdominals 2 x 5',
+        'Programme 1',
+        'Abdominals 2 x 5',
+        '40 mins run walk',
+        'Abdominals 2 x 10',
+        'Novice Weights',
+        'Abdominals 2 x 10',
+        ])
+beg_wk_3 = Weeks(
+        [
+        '40 mins Run',
+        'Abs and Pushups',
+        'Programme 1',
+        'Abs and Pushups',
+        'Novice Weights',
+        'Abs and Pushups',
+        'Swim',
+        ])
+beg_wk_4 = Weeks(
+        [
+        'Abs and Pushups  -  40 mins Run',
+        'Novice Weights',
+        'Programme 1  -  40 mins Run',
+        'Rest',
+        'Abs and Pushups',
+        'Novice Weights',
+        'Programme 1',
+        ])
 
-    intermediate_weeks = [
-            [
-            "Run 5km  -  Programme 2  -  Stretch",
-            "Rest",
-            "Intermediate Weights",
-            "Rest",
-            "Cycling Stage one  -  Programme 2 - 10 reps  -  Stretch",
-            "Rest",
-            "Intermediate Weights",
-            ],
-            [
-            "Timed Swim",
-            "Run 5km - Stretch",
-            "Rest",
-            "Intermediate Weights",
-            "Rest",
-            "Cycle Stage 1 - Programme 2 - Stretch",
-            "Timed Swim",
-            ],
-            [
-            "Programme 2",
-            "Rest",
-            "Intermediate Weights",
-            "Rest",
-            "Cycle Stage 1 - Programme 2",
-            "Rest",
-            "Intermediate Weights",
-            ],
-            [
-            "Swim",
-            "Run - Programme 2",
-            "Intermediate Weights",
-            "Cycle - Programme 2",
-            "Intermediate Weights",
-            "Run - Programme 2",
-            "Swim",
-            ],
-        ]
-
-    advanced_weeks = [
-                [
-                "Run 8km  - Programme 3",
-                "Rest",
-                "Advanced Weights",
-                "Timed Swim",
-                "Cycling Stage 2  -  Advanced Weights 1 set",
-                "Rest",
-                "Fast Run  -  Programme 3",
-                ],
-                [
-                'Fun Swim',
-                'Advanced Weights',
-                'Rest',
-                'Cycling Stage 2  - Advanced Weights + 2 reps',
-                'Rest',
-                'Advanced Weights',
-                'Run 8km  -  Programme 3',
-                ],
-                [
-                'Timed Swim',
-                'Advanced Weights',
-                'Rest',
-                'Cycling Stage 2  -  Programme 3',
-                'Rest',
-                'Advanced Weights',
-                'Rest',
-                ],
-                [
-                'Programme 3',
-                'Run 8kms',
-                'Advanced Weights',
-                'Cycling Stage 2',
-                'Programme 3',
-                'Advanced Weights',
-                'Run 8kms',
-                ],
-    ]
+int_wk_1 = Weeks(
+        [
+        "Run 5km  -  Programme 2  -  Stretch",
+        "Rest",
+        "Intermediate Weights",
+        "Rest",
+        "Cycling Stage one  -  Programme 2 - 10 reps  -  Stretch",
+        "Rest",
+        "Intermediate Weights",
+        ])
+int_wk_2 = Weeks(
+        [
+        "Timed Swim",
+        "Run 5km - Stretch",
+        "Rest",
+        "Intermediate Weights",
+        "Rest",
+        "Cycle Stage 1 - Programme 2 - Stretch",
+        "Timed Swim",
+        ])
+int_wk_3 = Weeks(
+        [
+        "Programme 2",
+        "Rest",
+        "Intermediate Weights",
+        "Rest",
+        "Cycle Stage 1 - Programme 2",
+        "Rest",
+        "Intermediate Weights",
+        ])
+int_wk_4 = Weeks(
+        [
+        "Swim",
+        "Run - Programme 2",
+        "Intermediate Weights",
+        "Cycle - Programme 2",
+        "Intermediate Weights",
+        "Run - Programme 2",
+        "Swim",
+        ])
 
 
+adv_wk_1 = Weeks(
+        [
+        "Run 8km  - Programme 3",
+        "Rest",
+        "Advanced Weights",
+        "Timed Swim",
+        "Cycling Stage 2  -  Advanced Weights 1 set",
+        "Rest",
+        "Fast Run  -  Programme 3",
+        ])
+adv_wk_2 = Weeks(
+        [
+        'Fun Swim',
+        'Advanced Weights',
+        'Rest',
+        'Cycling Stage 2  - Advanced Weights + 2 reps',
+        'Rest',
+        'Advanced Weights',
+        'Run 8km  -  Programme 3',
+        ])
+adv_wk_3 = Weeks(
+        [
+        'Timed Swim',
+        'Advanced Weights',
+        'Rest',
+        'Cycling Stage 2  -  Programme 3',
+        'Rest',
+        'Advanced Weights',
+        'Rest',
+        ])
+adv_wk_4 = Weeks(
+        [
+        'Programme 3',
+        'Run 8kms',
+        'Advanced Weights',
+        'Cycling Stage 2',
+        'Programme 3',
+        'Advanced Weights',
+        'Run 8kms',
+        ])
 

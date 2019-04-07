@@ -1,20 +1,21 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% block content %}
 
 <h1>Advanced Workout</h1>
+
 <table> 
     <tr>
         <th></th>
         {% for day in range(1,8) %}
-        <th>Day {{ loop.index }}
-            {% endfor %}</th>
+        <th>Day {{ loop.index }}</th>
+        {% endfor %}
     </tr>
 
-    {% for line in week %}
+    {% for week in [week1, week2, week3, week4] %}
     <tr>
         <th>Week {{ loop.index }}</th>
-        {% for day in week[loop.index0] %}
-        <td>{{ day }}</td>
+        {% for day in week.week %}
+        <td>{{ week.week[loop.index0] }}</td>
         {% endfor %}
     </tr>
     {% endfor %}
