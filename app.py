@@ -8,13 +8,12 @@ app = Flask(__name__)
 @app.route('/')
 
 def index():
-    exercises = Exercise()
     week = Weeks()
                     
     return render_template("index.html", 
-            programme1=exercises.programme1, 
-            novice_weights=exercises.novice_weights, 
-            abdominals=exercises.abdominals,
+            program1=programme1,
+            nov_wts=novice_weights,
+            abdominals=abdominals,
             week=week.beginner_weeks,
             )
 
@@ -22,16 +21,15 @@ def index():
 @app.route('/intermediate')
 
 def intermediate():
-    exercises = Exercise()
     week = Weeks()
 
     return render_template("int.html",
-            everyday=exercises.everyday,
-            programme1=exercises.programme1,
-            programme2=exercises.programme2,
-            int_strength=exercises.int_strength,
-            cycle=exercises.cycle,
-            timed_swim=exercises.timed_swim,
+            everyday=everyday,
+            program1=programme1,
+            program2=programme2,
+            int_strength=int_strength,
+            cycle=cycle,
+            timed_swim=timed_swim,
             week=week.intermediate_weeks,
             )
 
@@ -39,16 +37,15 @@ def intermediate():
 @app.route('/advanced')
 
 def advanced():
-    exercises = Exercise()
     week = Weeks()
 
     return render_template("adv.html",
-            everyday=exercises.everyday,
-            programme3=exercises.programme3,
-            extras=exercises.extras,
-            adv_weights=exercises.advancedweights,
-            run=exercises.run,
-            swim=exercises.fun_swim,
+            everyday=everyday,
+            programme3=programme3,
+            extras=extras,
+            adv_weights=advancedweights,
+            run=run,
+            swim=fun_swim,
             week=week.advanced_weeks,
             )
 

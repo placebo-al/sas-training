@@ -1,18 +1,15 @@
 class Exercise(object):
 
-    def __init__(self):
-        pass
+    def __init__(self, name, sets, reps, exes):
+        self.name = name
+        self.sets = sets
+        self.reps = reps
+        self.exes = exes
+        if len(reps) == 1:
+            reps += (len(exes)-1) * reps
 
-class Programme1(object):
 
-    def __init__(self):
-        pass
-
-    name = 'Programme 1'
-    tag = 'programme1'
-    sets = 3
-    reps = 5
-    exes = [
+programme1 = Exercise('Programme 1',3 ,[5] , [
         'Push Ups',
         'Crunches',
         'Lunges',
@@ -25,52 +22,34 @@ class Programme1(object):
         'Leg Raises',
         'Rear Scissors',
         'Bent Knee Sit-ups',
-        ]
+        ])
 
-class Novice_weights(object):
-    
-    def __init__(self):
-        pass
-    
-    name = 'Novice Weights'
-    tag = 'nov_weights'
-    sets = 3
-    reps = 10
-    exes = [ 
+
+novice_weights = Exercise('Novice Weights', 3, [10], exes = [ 
             'DB Laterals',
             'Flyes',
             'Bent Over Rows',
             'Standing Calf Raises',
             'BB Bicep Curls',
             'Squats',
-            ]
+            ])
 
-class Abdominals(object):
-    
-    def __init__(self):
-        pass
-    
-    name = 'Abdominals'
-    tag = 'abs'
-    sets = 2
-    reps = 10
+abdominals = Exercise(
+    name = 'Abdominals',
+    sets = 2,
+    reps = [10],
     exes = [
             'V Crunches',
             'Twisting Crunches',
             'Bent Knee Sit Ups',
             'Wide Arm Press Ups',
             'Leg Raises',
-            ]
+            ])
 
-class Everyday(object):
-    
-    def __init__(self):
-        pass
-    
-    name = 'Everyday Exercises'
-    tag = 'everyday'
-    sets = 3
-    reps = 5
+everyday = Exercise(
+    name = 'Everyday Exercises',
+    sets = 3,
+    reps = [5],
     exes = [
             'Breathing Exercises',
             'Press ups',
@@ -84,17 +63,12 @@ class Everyday(object):
             'Finger-tip Press ups',
             'Bent Knee Sit-ups',
             'Wide Arm Press ups',
-            ]
+            ])
     
-class Programme2(object):
-    
-    def __init__(self):
-         pass
-    
-    name = 'Programme 2'
-    tag = 'programme2'
-    sets = 3
-    reps = 5
+programme2 = Exercise(
+    name = 'Programme 2',
+    sets = 3,
+    reps = [5],
     exes = [
             'Squat Thrusts',
             'Crunches',
@@ -107,17 +81,12 @@ class Programme2(object):
             'Leg Raises',
             'Jump Ups',
             'Sit Ups',
-            ]
+            ])
        
-class Int_strength(object):
-    
-    def __init__(self):
-         pass
-    
-    name = 'Intermediate Strength'
-    tag = 'int_strength'
-    sets = 3
-    reps = [10, 10, 10, 10, 10, 5, 5, 5, 5, 5, 5]
+int_strength = Exercise(
+    name = 'Intermediate Strength',
+    sets = 3,
+    reps = [10, 10, 10, 10, 10, 5, 5, 5, 5, 5, 5],
     exes = [
             'Flyes',
             'Bent Over Rows',
@@ -130,93 +99,68 @@ class Int_strength(object):
             'Standing Calf Raises',
             'Lying Triceps Presses',
             'Squats',
-            ]
+            ])
 
-class Cycle(object):
-    
-    def __init__(self):
-         pass
-    
-    name = 'Cycle Workouts'
-    tag = 'cycle'
-    sets = 1
+cycle = Exercise(
+    name = 'Cycle Workouts',
+    sets = 1,
     exes = [
          'Stage 1',
          'Stage 2',
          'Stage 3',
-         ]
+         ],
     reps = [
         '16 km',
         '32 km',
         '80 km',
-        ]
+        ])
 
 
-class run(object):
-    
-    def __init__(self):
-        pass
-    
-    name = 'Run Workouts'
-    tag = 'run'
-    sets = 1
+run = Exercise(
+    name = 'Run Workouts',
+    sets = 1,
     exes = [
         'Short Run',
         'Fun Run',
         'Fast Run',
         'Long Run',
-        ]
+        ],
     reps = [
        '5 km, 30 minutes',
        '8.5 km',
        '5 km as fast as possible',
        '16 km',
-       ]
+       ])
 
-class Timed_swim(object):
-    
-    def __init__(self):
-        pass
-    
-    name = 'Swimming Workout'
-    tag = 'timed_swim'
-    sets = 1
+timed_swim = Exercise(
+    name = 'Swimming Workout',
+    sets = 1,
+    reps =  [
+            'Rest 3 mins',
+            'Rest 6 mins',
+            'Rest 6 mins',
+            'Rest 3 mins',
+            'Finish up',
+            ],
     exes = [
             '4 Laps 3mins',
             '8 Laps 6mins',
             '16 Laps 12 mins',
             '8 Laps 6mins',
             '4 Laps 3mins',
-            ]
-    reps =  [
-        'Rest 3 mins',
-        'Rest 6 mins',
-        'Rest 6 mins',
-        'Rest 3 mins',
-        'Finish up',
-        ]
+            ])
 
 
-class Fun_swim(object):
+fun_swim = Exercise(
+    name = 'Fun Swim',
+    sets = 1,
+    reps = [1],
+    exes = ['30 mins vary strokes',])
     
-    def __init__(self):
-        pass
-    
-    name = 'Fun Swim'
-    tag = 'fun_swim'
-    reps = 1
-    sets = 1
-    exes = ['30 mins vary strokes',]
-    
-class Programme3(object):
-    
-    def __init__(self):
-        pass
-    
-    name = 'Programme 3'
-    tag = 'programme3'
-    sets = 3
-    reps = 10
+programme3 = Exercise(
+    name = 'Programme 3',
+    sets = 3,
+    reps = [10],
     exes = [
             'Press Ups',
             'Crunches',
@@ -240,17 +184,12 @@ class Programme3(object):
             'Thigh Hand Slides',
             'Rear Scissors',
             'Leg Raises',
-            ]
+            ])
 
-class Extras(object):
-    
-    def __init__(self):
-         pass
-    
-    name = 'Extra exercises'
-    tag = 'extras'
-    sets = 3
-    reps = 10
+extras = Exercise(
+    name = 'Extra exercises',
+    sets = 3,
+    reps = [10],
     exes = [
             'Head Rolls',
             'Twisting Crunches',
@@ -260,17 +199,12 @@ class Extras(object):
             'Rope Climb',
             'Chins Overhand',
             'Chins Underhand',
-            ]
+            ])
 
-class Advancedweights(object):
-    
-    def __init__(self):
-         pass
-    
-    name = 'Advanced Weights'
-    tag = 'adv_weights'
-    sets = 3
-    reps = 10
+advancedweights = Exercise(
+    name = 'Advanced Weights',
+    sets = 3,
+    reps = [10],
     exes = [
             'DB Laterals',
             'Upright Rows',
@@ -294,7 +228,7 @@ class Advancedweights(object):
             'Leg Extensions',
             'Leg Curls',
             '''End of the week you can halve the weights and do 30then 40 and 50 reps before adding weight and starting again'''
-            ]
+            ])
     
     
 class Weeks(object):

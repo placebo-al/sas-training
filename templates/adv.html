@@ -23,13 +23,13 @@
 {% for workout in [everyday,run,swim,programme3,adv_weights,extras] %}
 <table>
     <tr>
-        <th>{{ workout['name'] }}</th>
-        <th>{{ workout['sets'] }}</th>
+        <th>{{ workout.name }}</th>
+        <th>{{ workout.sets }} sets</th>
     </tr>
-    {% for line in workout['exes'] %}
+    {% for line in workout.exes %}
     <tr>
-        <td>{{ workout['exes'][loop.index0] }}</td>
-        <td>{{ workout['reps'] }}</td>
+        <td>{{ workout.exes[loop.index0] }}</td>
+        <td>{{ workout.reps[loop.index0] }}</td>
     </tr>
     {% endfor %}
 </table>
