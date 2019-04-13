@@ -9,6 +9,14 @@ class Workout(object):
             reps += (len(exes)-1) * reps
 
 
+#class Exercise(object):
+#
+#    def __init__(self, name, sets, reps):
+#        self.name = name
+#        self.sets = sets
+#        self.reps = reps
+
+
 programme1 = Workout('Programme 1',3 ,[5] , [
         'Push Ups',
         'Crunches',
@@ -23,7 +31,6 @@ programme1 = Workout('Programme 1',3 ,[5] , [
         'Rear Scissors',
         'Bent Knee Sit-ups',
         ])
-
 
 nov_weights = Workout('Novice Weights', 3, [10], exes = [ 
             'DB Laterals',

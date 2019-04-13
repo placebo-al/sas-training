@@ -39,7 +39,6 @@ def intermediate():
 @app.route('/advanced')
 
 def advanced():
-
     return render_template("adv.html",
             everyday=everyday,
             programme3=programme3,
