@@ -190,7 +190,7 @@ awr  = Exercise(name = 'Squats', sets = 3, reps = 10)
 aws  = Exercise(name = 'Standing Calf Raises', sets = 3, reps = 10)
 awt  = Exercise(name = 'Leg Extensions', sets = 3, reps = 10)
 awu  = Exercise(name = 'Leg Curls', sets = 3, reps = 10)
-# '''End of the week you can halve the weights and do 30then 40 and 50 reps before adding weight and starting again'''
+# '''End of the week you can halve the weights and do 30 then 40 and 50 reps before adding weight and starting again'''
 
 adv_weights = Workout(name = 'Advanced Weights', exes = [
     awa, awb, awc, awd, 
