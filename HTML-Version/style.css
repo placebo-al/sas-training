@@ -1,0 +1,21 @@
+
+.divTable {
+    display:table; 
+    width: 50%; 
+}
+
+.header-cell {
+    display: table-cell;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.row { 
+    display:table-header-group;
+}
+
+.cell {
+    display:table-cell;
+    padding: 10px;
+    text-align: center;
+}
