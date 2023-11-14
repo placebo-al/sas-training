@@ -1,5 +1,19 @@
 /* This is the initial styling for the div tables */
 
+#abdominals {
+  width: 50%;
+  float: right;
+}
+
+#NoviceWeights {
+  width: 50%;
+  float: left;
+}
+
+section{
+  clear: left;
+}
+
 .divTable {
     box-sizing: border-box;
     display:table; 
